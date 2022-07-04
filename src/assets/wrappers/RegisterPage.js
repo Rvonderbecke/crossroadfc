@@ -3,6 +3,8 @@ import styled from 'styled-components'
 const Wrapper = styled.section`
   display: grid;
   align-items: center;
+  background-color: #EEF2F3;
+  color: #323D40;
   .logo {
     display: block;
     margin: 0 auto;

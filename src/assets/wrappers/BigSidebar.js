@@ -5,6 +5,7 @@ const Wrapper = styled.aside`
   @media (min-width: 992px) {
     display: block;
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-right:1px solid var(--grey-200);
     .sidebar-container {
       background: var(--white);
       min-height: 100vh;
@@ -25,16 +26,21 @@ const Wrapper = styled.aside`
       display: flex;
       align-items: center;
       padding-left: 2.5rem;
+    
+      .logo {
+        height: 6em;
+        transform: translate(-1rem, 1.5rem);
+      }
     }
     .nav-links {
-      padding-top: 2rem;
+      padding-top: 4rem;
       display: flex;
       flex-direction: column;
     }
     .nav-link {
       display: flex;
       align-items: center;
-      color: var(--grey-500);
+      color: var(--primary-1000);
       padding: 1rem 0;
       padding-left: 2.5rem;
       text-transform: capitalize;

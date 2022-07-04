@@ -8,6 +8,8 @@ import {
 	SETUP_USER_BEGIN,
 	SETUP_USER_SUCCESS,
 	SETUP_USER_ERROR,
+	TOGGLE_SIDEBAR,
+	LOGOUT_USER,
 } from './actions';
 
 const token = localStorage.getItem('token');
@@ -23,6 +25,8 @@ const initialState = {
 	token: token,
 	userLocation: userZipCode || '',
 	projectLocation: '',
+	showSideBar: false,
+	enrolledInTkd: false,
 };
 
 const AppContext = createContext();
@@ -45,11 +49,11 @@ const AppProvider = ({ children }) => {
 		localStorage.setItem('token', token);
 		localStorage.setItem('location', zipCode);
 	};
-	// const removeUsertoLocalStorage = ({ user, token, zipCode }) => {
-	// 	localStorage.removeItem('user');
-	// 	localStorage.removeItem('token');
-	// 	localStorage.removeItem('location');
-	// };
+	const removeUsertoLocalStorage = () => {
+		localStorage.removeItem('user');
+		localStorage.removeItem('token');
+		localStorage.removeItem('location');
+	};
 
 	const setupUser = async (currentUser, path, alertText) => {
 		dispatch({ type: SETUP_USER_BEGIN });
@@ -60,17 +64,25 @@ const AppProvider = ({ children }) => {
 				type: SETUP_USER_SUCCESS,
 				payload: { user, token, zipCode, alertText },
 			});
-			addUsertoLocalStorage({user, token, zipCode})
+			addUsertoLocalStorage({ user, token, zipCode });
 		} catch (err) {
 			dispatch({
 				type: SETUP_USER_ERROR,
-			payload: {msg: err.message}})
+				payload: { msg: err.message },
+			});
 		}
+	};
+	const toggleSidebar = () => {
+		dispatch({ type: TOGGLE_SIDEBAR });
+	};
+	const logoutUser = () => {
+		dispatch({ type: LOGOUT_USER });
+		removeUsertoLocalStorage();
 	};
 
 	return (
 		<AppContext.Provider
-			value={{ ...state, displayAlert, setupUser }}>
+			value={{ ...state, displayAlert, setupUser, toggleSidebar, logoutUser }}>
 			{children}
 		</AppContext.Provider>
 	);

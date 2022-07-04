@@ -18,11 +18,12 @@ html {
   --primary-200: #87eaf2;
   --primary-300: #54d1db;
   --primary-400: #38bec9;
-  --primary-500: #2cb1bc;
+  --primary-500: #219EBC;
   --primary-600: #14919b;
   --primary-700: #0e7c86;
   --primary-800: #0a6c74;
   --primary-900: #044e54;
+  --primary-1000: #07292D
 
   /* grey */
   --grey-50: #f0f4f8;
@@ -44,7 +45,7 @@ html {
   --green-dark: #0f5132;
 
   /* fonts  */
-  --headingFont: 'Roboto Condensed', Sans-Serif;
+  --headingFont: 'Cinzel', Sans-Serif;
   --bodyFont: 'Cabin', Sans-Serif;
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
@@ -58,7 +59,7 @@ html {
   --fixed-width: 500px;
   --fluid-width: 90vw;
   --breakpoint-lg: 992px;
-  --nav-height: 6rem;
+  --nav-height: 8rem;
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),

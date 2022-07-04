@@ -5,17 +5,26 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0px 1px rgba(0, 0, 0, 0.1);
+  border-bottom:1px solid var(--grey-200);
+  border-top: 5px solid #219EBC;
+
+  
   .logo {
     display: flex;
     align-items: center;
     width: 100px;
+  }
+  .logo-text {
+    font-weight: 600;
   }
   .nav-center {
     display: flex;
     width: 90vw;
     align-items: center;
     justify-content: space-between;
+   
+      
   }
   .toggle-btn {
     background: transparent;
