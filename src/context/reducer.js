@@ -6,6 +6,7 @@ import {
 	SETUP_USER_ERROR,
 	TOGGLE_SIDEBAR,
 	LOGOUT_USER,
+	VIEW_USER_PROGRAMS
 } from './actions';
 import { initialState } from './appContext';
 

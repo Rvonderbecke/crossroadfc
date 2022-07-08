@@ -37,6 +37,7 @@ const Wrapper = styled.section`
     margin-top: 0.5rem;
     button {
       height: 35px;
+      
     }
   }
   .clear-btn {

@@ -12,14 +12,26 @@ const links = [
     },
     {
         id: 2,
+        text: 'Trip Outreach',
+        path: 'trip',
+        icon: <MdQueryStats />
+    },
+    {
+        id: 3,
         text: 'Taekwondo',
         path: 'taekwondo',
         icon: <MdQueryStats />
     },
     {
-        id: 3,
+        id: 4,
         text: 'Bid Democracy',
         path: 'biddemocracy',
+        icon: <FaWpforms />
+    },
+    {
+        id: 5,
+        text: 'Profile',
+        path: 'profile',
         icon: <FaWpforms />
     },
 

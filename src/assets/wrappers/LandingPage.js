@@ -87,6 +87,7 @@ const Wrapper = styled.main`
     color: #323D40;
     padding-left: 1rem;
     margin: 1rem;
+   
     
   }
     
@@ -104,14 +105,34 @@ const Wrapper = styled.main`
 
 
 
-  @media (min-width: 992px) {
-    .page {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 3rem;
+
+  @media (max-width: 992px) {
+  .landing-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: .5rem;
+
+    .nav-link{
+      width:30rem;
     }
-    .main-img {
-      display: block;
+   }
+    .landingContainer {
+      height:100%;
+      width: 100%;
+      margin-bottom: 0;
+     
+    header h2 {
+    display: none;
     }
+    
+    p{
+     margin: 0;
+     padding: 0 2rem 0 2rem;
+    }}
   }
+
+
 `
 export default Wrapper

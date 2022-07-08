@@ -13,6 +13,7 @@ const initialState = {
 	password: '',
 	zipCode: '',
 	isMember: true,
+	startDate: ''
 };
 
 const Register = () => {
@@ -30,13 +31,14 @@ const Register = () => {
 	};
 	const onSubmit = (e) => {
 		e.preventDefault();
-		const { lName, fName, email, password, isMember, zipCode, displayName } =
+		const { lName, fName, email, password, isMember, zipCode, startDate } =
 			values;
 		if (!email || !password || (!isMember && !fName)) {
 			displayAlert();
 			return;
 		}
-		const currentUser = { fName, lName, email, password, zipCode, displayName };
+		const currentUser = { fName, lName, email, password, zipCode, startDate };
+		console.log(currentUser)
 		if (isMember) {
 			setupUser(currentUser, 'login', 'Login Successful, Redirecting...')
 		} else {
@@ -59,13 +61,7 @@ const Register = () => {
 				{showAlert && <Alert />}
 				{!values.isMember && (
 					<>
-						<FormRow
-							type='text'
-							name='displayName'
-							value={values.displayName}
-							onChange={handleChange}
-							labelText='Display Name'
-						/>
+					
 						<FormRow
 							type='text'
 							name='fName'

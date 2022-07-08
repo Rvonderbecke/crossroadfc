@@ -34,6 +34,13 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
+	const authFetch = axios.create({
+		baseURL: '/api/v1', 
+			headers: {
+			Authorization: `Bearer ${state.token}`,
+		}
+	});
+
 	const displayAlert = () => {
 		dispatch({ type: DISPLAY_ALERT });
 		clearAlert();
@@ -60,6 +67,7 @@ const AppProvider = ({ children }) => {
 		try {
 			const { data } = await axios.post(`/api/v1/auth/${path}`, currentUser);
 			const { user, token, zipCode } = data;
+			console.log(user)
 			dispatch({
 				type: SETUP_USER_SUCCESS,
 				payload: { user, token, zipCode, alertText },
@@ -68,7 +76,7 @@ const AppProvider = ({ children }) => {
 		} catch (err) {
 			dispatch({
 				type: SETUP_USER_ERROR,
-				payload: { msg: err.message },
+				payload: { msg: err },
 			});
 		}
 	};
@@ -79,10 +87,28 @@ const AppProvider = ({ children }) => {
 		dispatch({ type: LOGOUT_USER });
 		removeUsertoLocalStorage();
 	};
+	const updateUser = async (currentUser) => {
+		console.log(currentUser);
+		try {
+			const { data } = await authFetch.patch(
+				'/auth/updateuser',
+				currentUser);
+			console.log(data);
+		} catch (error) {
+			console.log(error.response);
+		}
+	};
 
 	return (
 		<AppContext.Provider
-			value={{ ...state, displayAlert, setupUser, toggleSidebar, logoutUser }}>
+			value={{
+				...state,
+				displayAlert,
+				setupUser,
+				toggleSidebar,
+				logoutUser,
+				updateUser,
+			}}>
 			{children}
 		</AppContext.Provider>
 	);

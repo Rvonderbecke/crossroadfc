@@ -1,36 +1,57 @@
 import { useReducer, useContext, createContext } from 'react';
 import axios from 'axios';
-import reducer from './tkdreducer';
+import tkdReducer from './tkdreducer';
 
-import { CREATE_TKD_PROFILE } from './actions';
+import { CREATE_TKD_PROFILE, VIEW_USER_PROGRAMS } from './actions';
 
 const InitalProfileState = {
-    isTkdLoading: true,
-    data: '',
+	isTkdLoading: true,
+	startDate: null,
+	taekwondo: {},
+	biddemo: {},
+	trip: {},
+	fullName: '',
+	data: '',
 };
 
 const TkdContext = createContext();
 
 const TkdProvider = ({ children }) => {
-	const [state, dispatch] = useReducer(reducer, InitalProfileState);
+	const [state, dispatch] = useReducer(tkdReducer, InitalProfileState);
 
 	const createTkdProfile = async (user) => {
 		try {
 			const { data } = await axios.post(
 				'/api/v1/taekwondo/taekwondoStudentProfile'
 			);
-			console.log(data);
 			dispatch({
 				type: CREATE_TKD_PROFILE,
 				payload: { data },
 			});
-        } catch (err) {
-            console.log(err)
-        }
+		} catch (err) {
+			console.log(err);
+		}
+	};
+	const getUserProgramDetails = async (user) => {
+
+		try {
+			const { data } = await axios.get(
+				'/api/v1/taekwondo/taekwondoStudentProfile',
+				user
+			);
+			const { fullName, taekwondo, biddemo, trip } = data;
+			dispatch({
+				type: VIEW_USER_PROGRAMS,
+				payload: {fullName, taekwondo, biddemo, trip},
+			});
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	return (
-		<TkdContext.Provider value={{ ...state, createTkdProfile }}>
+		<TkdContext.Provider
+			value={{ ...state, createTkdProfile, getUserProgramDetails }}>
 			{children}
 		</TkdContext.Provider>
 	);

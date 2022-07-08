@@ -7,7 +7,7 @@ const Wrapper = styled.aside`
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
     border-right:1px solid var(--grey-200);
     .sidebar-container {
-      background: var(--white);
+      background: #E2F9FF;
       min-height: 100vh;
       height: 100%;
       width: 250px;
@@ -49,7 +49,7 @@ const Wrapper = styled.aside`
     .nav-link:hover {
       background: var(--grey-50);
       padding-left: 3rem;
-      color: var(--grey-900);
+      color: var(--primary-500);
     }
     .nav-link:hover .icon {
       color: var(--primary-500);
@@ -58,14 +58,14 @@ const Wrapper = styled.aside`
       font-size: 1.5rem;
       margin-right: 1rem;
       display: grid;
-      place-items: center;
+      place-items: center;  
       transition: var(--transition);
     }
     .active {
-      color: var(--grey-900);
+      color: var(--grey-300);
     }
     .active .icon {
-      color: var(--primary-500);
+      color: var(--grey-300);
     }
   }
 `

@@ -10,3 +10,8 @@ export const LOGOUT_USER = 'LOGOUT_USER'
 
 //tkd actions
 export const CREATE_TKD_PROFILE = 'CREATE_TKD_PROFILE';
+
+
+
+//programs
+export const VIEW_USER_PROGRAMS = 'VIEW_USER_PROGRAMS';
