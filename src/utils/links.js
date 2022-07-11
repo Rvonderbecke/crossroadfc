@@ -34,6 +34,7 @@ const links = [
         path: 'profile',
         icon: <FaWpforms />
     },
+   
 
 ];
 export default links

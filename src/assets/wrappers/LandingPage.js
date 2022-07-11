@@ -107,7 +107,7 @@ const Wrapper = styled.main`
 
 
   @media (max-width: 992px) {
-  .landing-links {
+  .landing-links {  
     display: flex;
     flex-direction: column;
     align-items: center;

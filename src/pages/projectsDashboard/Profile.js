@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
+import { GrUserAdmin } from 'react-icons/gr';
 import { FormRow, Alert} from '../../components'
 import { useAppContext } from "../../context/appContext"
 import Wrapper from '../../assets/wrappers/DashboardFormPage'
@@ -38,6 +40,19 @@ const Profile = () => {
             {isLoading ? 'Please Wait...' : 'Save Changes'}
           </button>
         </div>
+        {user.admin && (
+						<NavLink
+							to='/admin'
+							className={({ isActive }) =>
+								isActive ? 'nav-link active' : 'nav-link'
+							}
+							key='6'
+							>
+							<span className='icon'><GrUserAdmin /></span>
+							Admin
+						</NavLink>
+					)}
+
 
       </form>
     </Wrapper>

@@ -13,7 +13,8 @@ const initialState = {
 	password: '',
 	zipCode: '',
 	isMember: true,
-	startDate: ''
+	startDate: '',
+	admin: false,
 };
 
 const Register = () => {
@@ -31,13 +32,13 @@ const Register = () => {
 	};
 	const onSubmit = (e) => {
 		e.preventDefault();
-		const { lName, fName, email, password, isMember, zipCode, startDate } =
+		const { lName, fName, email, password, isMember, zipCode, startDate, admin } =
 			values;
 		if (!email || !password || (!isMember && !fName)) {
 			displayAlert();
 			return;
 		}
-		const currentUser = { fName, lName, email, password, zipCode, startDate };
+		const currentUser = { fName, lName, email, password, zipCode, startDate, admin };
 		console.log(currentUser)
 		if (isMember) {
 			setupUser(currentUser, 'login', 'Login Successful, Redirecting...')

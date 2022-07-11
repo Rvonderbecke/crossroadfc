@@ -6,7 +6,8 @@ import {
 	SETUP_USER_ERROR,
 	TOGGLE_SIDEBAR,
 	LOGOUT_USER,
-	VIEW_USER_PROGRAMS
+	VIEW_USER_PROGRAMS,
+	ADD_TAPES
 } from './actions';
 import { initialState } from './appContext';
 
@@ -64,6 +65,12 @@ const reducer = (state, action) => {
 				userLocation: null,
 				projectLocation: null,
 			};
+		case ADD_TAPES:
+			return {
+				...state,
+				tapeName: action.payload.name,
+
+			}
 
 		default:
 			break;

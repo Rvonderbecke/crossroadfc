@@ -10,6 +10,7 @@ import {
 	SETUP_USER_ERROR,
 	TOGGLE_SIDEBAR,
 	LOGOUT_USER,
+	ADD_TAPES,
 } from './actions';
 
 const token = localStorage.getItem('token');
@@ -27,6 +28,7 @@ const initialState = {
 	projectLocation: '',
 	showSideBar: false,
 	enrolledInTkd: false,
+	tapeName: '',
 };
 
 const AppContext = createContext();
@@ -67,7 +69,6 @@ const AppProvider = ({ children }) => {
 		try {
 			const { data } = await axios.post(`/api/v1/auth/${path}`, currentUser);
 			const { user, token, zipCode } = data;
-			console.log(user)
 			dispatch({
 				type: SETUP_USER_SUCCESS,
 				payload: { user, token, zipCode, alertText },
@@ -80,6 +81,19 @@ const AppProvider = ({ children }) => {
 			});
 		}
 	};
+	//admin fuctions
+	const addTapes = async (tapeInfo) => {
+		try {
+			const { data } = await axios.post('/api/v1/admin/admin', tapeInfo)
+			const { name, content, completed, poomsaeVid } = data;
+			dispatch({
+				type: ADD_TAPES,
+				payload: { name, content, completed, poomsaeVid },
+			})
+		} catch (err) {
+			console.log(err)
+		}
+	}
 	const toggleSidebar = () => {
 		dispatch({ type: TOGGLE_SIDEBAR });
 	};
@@ -108,6 +122,7 @@ const AppProvider = ({ children }) => {
 				toggleSidebar,
 				logoutUser,
 				updateUser,
+				addTapes
 			}}>
 			{children}
 		</AppContext.Provider>

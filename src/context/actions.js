@@ -15,3 +15,6 @@ export const CREATE_TKD_PROFILE = 'CREATE_TKD_PROFILE';
 
 //programs
 export const VIEW_USER_PROGRAMS = 'VIEW_USER_PROGRAMS';
+
+//admin
+export const ADD_TAPES = 'ADD_TAPES';

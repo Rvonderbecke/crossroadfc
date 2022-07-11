@@ -3,8 +3,16 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const InfoBox = (props) => {
-	const { enrolled, currentRank, title, startDate, location } = props.info;
-	const [flip, setFlip] = useState(false);
+	const {
+		enrolled,
+		currentRank,
+		title,
+		startDate,
+		location,
+		rewardPointsTotal,
+		bidPointTotal,
+	} = props.info;
+	const [flip, setFlip] = useState(true);
 	const nav = useNavigate();
 	return (
 		<Wrapper onClick={() => setFlip(!flip)}>
@@ -28,10 +36,10 @@ const InfoBox = (props) => {
 					<h2>{title}</h2>
 					<img src={props.icon} alt='' className='icon reversed' />
 
-					<p className='rank'>{currentRank}</p>
-					<p className='startDate'>
-						{startDate && `Member Since ${startDate}`}
-					</p>
+					{currentRank && <p className='rank'>Current Rank: {currentRank}</p>}
+					{bidPointTotal && <p className='points'>Total Bid Points: {bidPointTotal}</p>}
+					{rewardPointsTotal && <p className='points'>Total Reward Points: {rewardPointsTotal}</p>}
+					{startDate && `Member Since ${startDate}`}
 					<button
 						className='btn btnDash'
 						type='button'
@@ -55,15 +63,17 @@ const Wrapper = styled.div`
 	height: 25rem;
 	font-family: var(--bodyFont);
 
-
 	img {
 		width: 100%;
 		border-radius: var(--borderRadius);
 	}
 	.icon {
+		border:0;
+		outline: 0;
 		height: 4.5rem;
 		width: 4.5rem;
 		transform: translate(7rem, -2.5rem);
+		
 	}
 	.title {
 		color: var(--primary-500);
@@ -88,18 +98,19 @@ const Wrapper = styled.div`
 	}
 
 	.reversed {
-		border: 1px solid black;
 		text-align: center;
 		margin-top: 2rem;
 	}
-	.rank {
+	.rank, .points {
 		color: var(--primary-500);
 		text-align: center;
 		margin: 0;
 		padding: 0%;
+		
 	}
 	.btnDash {
 		margin-left: 1.75rem;
+		margin-top: 6.5rem;
 		width: 80%;
 		height: 3rem;
 	}

@@ -45,7 +45,7 @@ const TkdProvider = ({ children }) => {
 				payload: {fullName, taekwondo, biddemo, trip},
 			});
 		} catch (error) {
-			console.log(error);
+			console.log(error)
 		}
 	};
 

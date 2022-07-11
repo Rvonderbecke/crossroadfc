@@ -5,7 +5,9 @@ import Taekwondo from "./Taekwondo";
 import SharedProjectLayout from "./SharedProjectLayout";
 import Stats from "./Stats";
 import BidDemo from './BidDemo';
-
+import Trip from './Trip'
+import Account from './Account'
+import Admin from './Admin'
 
 
 
@@ -18,7 +20,10 @@ export {
     Profile,
     Stats,
     Taekwondo,
-    BidDemo
+    BidDemo,
+    Trip,
+    Account,
+    Admin,
     
 
 }

@@ -5,41 +5,48 @@ import {
 	Profile,
 	Stats,
 	Taekwondo,
-	BidDemo
+	BidDemo,
+	Trip,
+	Account,
+	Admin,
 } from './pages/projectsDashboard';
 import { TkdProvider } from './context/tkdContext.js';
-import { Tkdinfo, Tripinfo, Bidinfo, Aboutinfo} from './pages/infopages'
+import { Tkdinfo, Tripinfo, Bidinfo, Aboutinfo } from './pages/infopages';
 
 function App() {
+
 	return (
 		<TkdProvider>
-		<Router>
-			<Routes>
-				<Route
-					path='/'
-					element={
-						<ProtectedRoute>
-							<SharedProjectLayout />
-						</ProtectedRoute>
-					}>
-					
-					<Route index element={<Stats />} />
-					<Route path='/profile' element={<Profile />} />
-					<Route path='/taekwondo' element={<Taekwondo />} />
-					<Route path='/biddemocracy' element={<BidDemo />} />
-					
-				</Route>
-				<Route path='/register' element={<Register />} />
-				<Route path='/landing' element={<Landing />} />
-				<Route path='/tkdinfo' element={<Tkdinfo />} />
-				<Route path='/tripinfo' element={<Tripinfo />} />
-				<Route path='/bidinfo' element={<Bidinfo />} />
-				<Route path='/aboutus' element={<Aboutinfo />} />
-				
-				<Route path='*' element={<Error />} />
-			</Routes>
+			<Router>
+				<Routes>
+					<Route
+						path='/'
+						element={
+							<ProtectedRoute>
+								<SharedProjectLayout />
+							</ProtectedRoute>
+						}>
+						<Route index element={<Stats />} />
+						<Route path='/profile' element={<Profile />} />
+						<Route path='/taekwondo' element={<Taekwondo />} />
+						<Route path='/trip' element={<Trip />} />
+						<Route path='/biddemocracy' element={<BidDemo />} />
+						<Route path='/:id/account' element={<Account />} />
+						<Route path='/admin' element={<Admin />} />
+						
+						
+					</Route>
+					<Route path='/register' element={<Register />} />
+					<Route path='/landing' element={<Landing />} />
+					<Route path='/tkdinfo' element={<Tkdinfo />} />
+					<Route path='/tripinfo' element={<Tripinfo />} />
+					<Route path='/bidinfo' element={<Bidinfo />} />
+					<Route path='/aboutus' element={<Aboutinfo />} />
+
+					<Route path='*' element={<Error />} />
+				</Routes>
 			</Router>
-			</TkdProvider>
+		</TkdProvider>
 	);
 }
 

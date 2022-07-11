@@ -14,12 +14,13 @@ const Stats = () => {
 	const { createTkdProfile, getUserProgramDetails, fullName, taekwondo, biddemo, trip} =
     useTkdContext();
   const { enrolled, currentRank } = taekwondo;
+  
   useEffect(() => {
     try {
       getUserProgramDetails(user);
 
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message) 
     }
 	}, []);
 
