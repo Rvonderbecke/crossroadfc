@@ -52,13 +52,60 @@ const Taekwondo = () => {
 					<span>
 						<img src={tkdIcon} alt='' />
 					</span>
-						<StatusBar className='progressBar' />
-					
+					<StatusBar className='progressBar' />
+
 					<TapeComponent color='yellow' name='Yellow Tape' />
 				</>
 			) : (
 				<>
-					<div className='trip'>Coming soon!</div>
+					<div className='trip'>
+						<p>Current Points:</p>
+						<div className='graph'>
+							<div className='left'>
+								<div className='tripPoints'>875</div>
+								<ul>
+									<li>
+										<span>icon</span>Volunteer Work
+									</li>
+									<li>
+										<span>icon</span>Grades
+									</li>
+									<li>
+										<span>icon</span>Mentoring/Tutoring
+									</li>
+									<li>
+										<span>icon</span>Assistant Instructor
+									</li>
+									<li>
+										<span>icon</span>Other
+									</li>
+								</ul>
+								</div>
+								<div className="right">graph</div>
+							</div>
+							<div className="info-section">
+								<div className="infoBox">
+									<p>Sign up for different events to earn more points.See all the TRIPOutreach available upcoming events</p>
+									<button type='button'>Upgoming events</button>
+								</div>
+								<div className="infoBox">
+									<p>Sign up for different events to earn more points.See all the TRIPOutreach available upcoming events</p>
+									<button type='button'>Upgoming events</button>
+								</div>
+								<div className="infoBox">
+									<p>Sign up for different events to earn more points.See all the TRIPOutreach available upcoming events</p>
+									<button type='button'>Upgoming events</button>
+								</div>
+								<div className="infoBox">
+									<p>Sign up for different events to earn more points.See all the TRIPOutreach available upcoming events</p>
+									<button type='button'>Upgoming events</button>
+								</div>
+							</div>
+							<div className="cal">
+								<h2>My trip Schedule</h2>
+								<div>Calander</div>
+							</div>
+					</div>
 				</>
 			)}
 		</Wrapper>
@@ -78,8 +125,8 @@ const Wrapper = styled.section`
 		border-radius: 20px;
 		width: 50rem;
 		height: 3rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
+		margin-top: 2rem;
+		margin-left: 2rem;
 
 		.activeBtn {
 			border: none;
@@ -102,14 +149,13 @@ const Wrapper = styled.section`
 			height: 100%;
 		}
 	}
-.tape-container{
-  p {
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    margin: 3rem;
-
-  }
-}
+	.tape-container {
+		p {
+			text-transform: uppercase;
+			font-size: 1.25rem;
+			margin: 3rem;
+		}
+	}
 	.tkdBtn {
 		height: 5rem;
 		border-radius: 5px;
@@ -154,11 +200,11 @@ const Wrapper = styled.section`
 			font-weight: 500;
 		}
 	}
-  .progressBar {
-     box-shadow: var(--shadow-1);
-     border: 1px solid lightgray;
-     border-radius: 5px;
-  }
+	.progressBar {
+		box-shadow: var(--shadow-1);
+		border: 1px solid lightgray;
+		border-radius: 5px;
+	}
 	.container {
 		-ms-overflow-style: none; /* Internet Explorer 10+ */
 		scrollbar-width: none; /* Firefox */
@@ -167,61 +213,64 @@ const Wrapper = styled.section`
 		display: none; /* Safari and Chrome */
 	}
 
-  @media (max-width: 1479px) {
-    .progressBar {
-      width: 60rem;
-    }}
-  @media (max-width: 1367px) {
-    .progressBar {
-      width: 2rem;
-    }
-    .tapes {
-      margin-right: 20rem;
-    }
-    .toggleName{
-      margin-right: 16rem;
-    }
+	@media (max-width: 1479px) {
+		.progressBar {
+			width: 60rem;
+		}
+	}
+	@media (max-width: 1367px) {
+		.progressBar {
+			width: 2rem;
+		}
+		.tapes {
+			margin-right: 20rem;
+		}
+		.toggleName {
+			margin-right: 16rem;
+		}
 
-  @media (max-width: 1231px) {
-    .tapes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: .5rem;}}
-    
-    @media (max-width: 1109px) {
-      .toggleName {
-        width: 30rem;
-       
-      .activeBtn {
-        width: 15rem;
-      }
-      .notActiveBtn {
-        width: 15rem;
-      }}
-    }
-    @media (max-width: 992px) {
-      .tapes {
-        margin-right: 0;
-      }
-      .toggleName {
-        margin-right: 0;
-      }
+		@media (max-width: 1231px) {
+			.tapes {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+			}
+		}
 
-    }
-    @media (max-width: 536px) {
-      .toggleName {
-        width: 20rem;
+		@media (max-width: 1109px) {
+			.toggleName {
+				width: 30rem;
 
-        .activeBtn {
-        width: 10rem;
-      }
-      .notActiveBtn {
-        width: 10rem;
-      }
-      }
-    }
-    }
+				.activeBtn {
+					width: 15rem;
+				}
+				.notActiveBtn {
+					width: 15rem;
+				}
+			}
+		}
+		@media (max-width: 992px) {
+			.tapes {
+				margin-right: 0;
+			}
+			.toggleName {
+				margin-right: 0;
+			}
+		}
+		@media (max-width: 536px) {
+			.toggleName {
+				width: 20rem;
+
+				.activeBtn {
+					width: 10rem;
+				}
+				.notActiveBtn {
+					width: 10rem;
+				}
+			}
+		}
+	}
 `;
 export default Taekwondo;

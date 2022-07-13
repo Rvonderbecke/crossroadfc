@@ -1,4 +1,4 @@
-import Wrapper from '../../assets/wrappers/Tkdinfo.js';
+import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 import { useAppContext } from '../../context/appContext.js';
 import { useNavigate, Link } from 'react-router-dom';
@@ -33,4 +33,7 @@ const Bidinfo = () => {
 		</Wrapper>
 	);
 };
+const Wrapper = styled.section`
+
+`
 export default Bidinfo;

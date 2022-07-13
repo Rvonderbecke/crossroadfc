@@ -14,6 +14,11 @@ const InfoBox = (props) => {
 	} = props.info;
 	const [flip, setFlip] = useState(true);
 	const nav = useNavigate();
+
+	const handleClick = (e) => {
+		e.stopPropagation();
+		
+	}
 	return (
 		<Wrapper onClick={() => setFlip(!flip)}>
 			{flip ? (
@@ -25,7 +30,7 @@ const InfoBox = (props) => {
 						{enrolled ? (
 							'Enrolled !'
 						) : (
-							<button className='btn btnEnroll' type='button'>
+							<button className='btn btnEnroll' type='button' onClick={handleClick}>
 								Enroll
 							</button>
 						)}
