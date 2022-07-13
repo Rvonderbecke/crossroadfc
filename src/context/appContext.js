@@ -37,7 +37,7 @@ const AppProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	const authFetch = axios.create({
-		baseURL: '/api/v1', 
+		baseURL: 'https://git.heroku.com/crossroad-api.git/api/v1', 
 			headers: {
 			Authorization: `Bearer ${state.token}`,
 		}
@@ -67,7 +67,7 @@ const AppProvider = ({ children }) => {
 	const setupUser = async (currentUser, path, alertText) => {
 		dispatch({ type: SETUP_USER_BEGIN });
 		try {
-			const { data } = await axios.post(`/api/v1/auth/${path}`, currentUser);
+			const { data } = await axios.post(`https://git.heroku.com/crossroad-api.git/api/v1/auth/${path}`, currentUser);
 			const { user, token, zipCode } = data;
 			dispatch({
 				type: SETUP_USER_SUCCESS,
@@ -84,7 +84,7 @@ const AppProvider = ({ children }) => {
 	//admin fuctions
 	const addTapes = async (tapeInfo) => {
 		try {
-			const { data } = await axios.post('/api/v1/admin/admin', tapeInfo)
+			const { data } = await axios.post('https://git.heroku.com/crossroad-api.git/api/v1/admin/admin', tapeInfo)
 			const { name, content, completed, poomsaeVid } = data;
 			dispatch({
 				type: ADD_TAPES,
@@ -105,7 +105,7 @@ const AppProvider = ({ children }) => {
 		console.log(currentUser);
 		try {
 			const { data } = await authFetch.patch(
-				'/auth/updateuser',
+				'https://git.heroku.com/crossroad-api.git/auth/updateuser',
 				currentUser);
 			console.log(data);
 		} catch (error) {

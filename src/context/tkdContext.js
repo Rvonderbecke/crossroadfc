@@ -22,7 +22,7 @@ const TkdProvider = ({ children }) => {
 	const createTkdProfile = async (user) => {
 		try {
 			const { data } = await axios.post(
-				'/api/v1/taekwondo/taekwondoStudentProfile'
+				'https://git.heroku.com/crossroad-api.git/api/v1/taekwondo/taekwondoStudentProfile'
 			);
 			dispatch({
 				type: CREATE_TKD_PROFILE,
@@ -36,7 +36,7 @@ const TkdProvider = ({ children }) => {
 
 		try {
 			const { data } = await axios.get(
-				'/api/v1/taekwondo/taekwondoStudentProfile',
+				'https://git.heroku.com/crossroad-api.git/api/v1/taekwondo/taekwondoStudentProfile',
 				user
 			);
 			const { fullName, taekwondo, biddemo, trip } = data;
