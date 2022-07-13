@@ -42,13 +42,14 @@ const Tripinfo = () => {
 	];
 
 	return (
-		<Wrapper className='full-page'>
+		<Wrapper className='full-page'>  
 			<div>
-				<button type='button' className='close-btn' onClick={handleNav}>
+				
+				<div className='content'>
+					<div className='trip-content infoBox'>
+					<button type='button' className='close-btn' onClick={handleNav}>
 					<FaTimes />
 				</button>
-				<div className='content'>
-					<div className='trip-content'>
 						<h2>What is T.R.I.P Outreach?</h2>
 						<p>
 							Trip Outreach was introduced in 2004 as a program to teach

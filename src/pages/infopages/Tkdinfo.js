@@ -13,13 +13,14 @@ const Tkdinfo = () => {
 
 	return (
 		<Wrapper className='full-page'>
-			<button type='button' className='close-btn btn' onClick={handleNav}>  
+			
+			<div>
+				<div className='content '>
+					<div className='tkd-content infoBox'>
+					<button type='button' className='close-btn' onClick={handleNav}>  
 				<FaTimes />
 			</button>
-			<div>
-				<div className='content'>
-				<div className='tkd-content'>
-				<h3>Behavioral Taekwondo Programs</h3>
+				<h3 className='h3Info'>Behavioral Taekwondo Programs</h3>
 				<div className='self-control'>
 					<h2>Level 1-Self-Control</h2>
 					<p>
@@ -124,19 +125,14 @@ const Tkdinfo = () => {
 };
 
 const Wrapper = styled.section`
+
+
 	.content {
 		overflow-y: auto;
 		min-height: 100%;
 		width: 100%;
         padding-bottom: 15rem;
-
-            h3 {
-                text-align: center;
-                font-family: $font-primary-paragraph;
-                text-transform: uppercase;
-                font-size: 2rem;
-            
-            }
+		}
 		.self-control,
 		.self-awareness,
 		.strength,

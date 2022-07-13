@@ -104,10 +104,15 @@ h1 {
 
 h2 {
   font-size: 2.441rem;
+
 }
 
 h3 {
   font-size: 1.953rem;
+
+}
+.h3Info {
+  margin-left: 10%;
 }
 
 h4 {
@@ -145,7 +150,24 @@ ul {
   object-fit: cover;
 }
 /* buttons */
-
+.close-btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  font-size: 1.5rem;
+  padding-top: 8px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+  margin-left: 94%;
+  margin-top: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  
+}
 .btn {
   cursor: pointer;
   color: var(--white);
@@ -205,6 +227,16 @@ ul {
   background: var(--green-light);
 }
 /* form */
+.infoBox {
+  box-shadow: var(--shadow-2);
+	border-radius: 5px;
+	border-top: 5px solid var(--primary-500);
+	margin-top: 3rem;
+  width: 60%;
+  margin-left: 20%;
+  padding-left: 7rem;
+	
+}
 
 .form {
   width: 90vw;
