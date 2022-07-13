@@ -50,7 +50,7 @@ const Tripinfo = () => {
 					<button type='button' className='close-btn' onClick={handleNav}>
 					<FaTimes />
 				</button>
-						<h2>What is T.R.I.P Outreach?</h2>
+						<h3 className='h3Info'>What is T.R.I.P Outreach?</h3>
 						<p>
 							Trip Outreach was introduced in 2004 as a program to teach
 							responsibility and promote community engagement. From that day it
@@ -74,10 +74,10 @@ const Tripinfo = () => {
 						{infoBoxArray.map((item) => (
 							<InfoBoxWithPicture item={item} />
 						))}
-					</div>
 					<Link to='/register' className='btn btn-hero'>
 						Login/Register
 					</Link>
+					</div>
 				</div>
 			</div>
 		</Wrapper>
@@ -85,5 +85,10 @@ const Tripinfo = () => {
 };
 
 const Wrapper = styled.section`
+.bigImage {
+	width: 6rem;
+}
+
 `
+
 export default Tripinfo;

@@ -21,14 +21,14 @@ const Bidinfo = () => {
 					<button type='button' className='close-btn' onClick={handleNav}>
 					<FaTimes />
 				</button>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-						tenetur at accusamus fugit expedita delectus sed illo rem nihil
+						<p> tenetur at accusamus fugit expedita delectus sed illo rem nihil
 						nemo, possimus inventore? Dolorem, magnam sed ipsum unde atque hic
-						corporis?
-					</div>
+						corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+						</p>
 					<Link to='/register' className='btn btn-hero'>
 						Login/Register
 					</Link>
+					</div>
 				</div>
 			</div>
 		</Wrapper>
