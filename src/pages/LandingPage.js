@@ -1,10 +1,11 @@
 import { Grid, Row, Col, LandingPageWrapper } from '../styles';
 import SocialFollow from '../components/SocialFollow';
 import { useState } from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link} from 'react-router-dom';
 const user = false; //temp
 const LandingPage = () => {
 	const [user, setUser] = useState(false);
+
 	return (
 		<LandingPageWrapper>
 			<Grid>
@@ -16,7 +17,7 @@ const LandingPage = () => {
 							</Link>
 							<h1>crossroad family center</h1>
 						</div>
-						<Link to='/login'>
+						<Link to='login' reloadDocument>
 							<button className='btn headerBtn'>
 								{user ? 'Logout' : 'Login'}
 							</button>

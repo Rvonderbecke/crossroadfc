@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 export const Grid = styled.div``;
-export const Row = styled.div``;
+
+export const Row = styled.div`
+
+`;
 
 const media = {
 	xs: (styles) => `
@@ -12,6 +15,7 @@ const media = {
 };
 
 export const Col = styled.div`
+
 	flex: ${(props) => props.size};
 	${(props) => props.collapse && media[props.collapse](`display: none;`)};
 `;
@@ -38,13 +42,13 @@ export const LandingPageWrapper = styled.header`
 	}
 
 	.footerContainer {
-		height: 127px;
+		height: 120px;
 		display: flex;
 		background-color: var(--blue);
 	}
 
 	.footerNavLink {
-		margin: 2em 0 0 5em;
+		margin: 3em 0 0 5em;
 		a {
 			padding: 1rem;
 			text-decoration: none;
@@ -60,7 +64,7 @@ export const LandingPageWrapper = styled.header`
 		align-items: center;
 
 		img {
-			height: 56px;
+			height: 55px;
 		}
 		p {
 			font-family: 'cinzel', serif;
@@ -114,13 +118,15 @@ export const HomePageWrapper = styled.div`
 
 		
 		img {
-			margin-top: 3em;
+			margin-top: 4em;
 			height: 35em;
+			width: 150em;
 			border-radius: 10px 10px 0 0;
 			z-index: -1;
 			
 		}
 		p {
+			
 			font-family: 'cabin', sans-serif;
 			font-size: 2.5rem;
 			text-align: center;
@@ -151,6 +157,8 @@ export const HomePageWrapper = styled.div`
 		justify-content: center;
 		background-color: var(--darkBlue);
 		height: 3rem;
+		border-radius: 0 0 10px 10px;
+		margin-bottom: 1em;
 	}
 	.dot {
 		align-self: center;
@@ -165,3 +173,48 @@ export const HomePageWrapper = styled.div`
 		background-color: white;
 	}
 `;
+
+export const TkdWrapper = styled.div`
+ .tkdContainer {
+	.banner {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 15em;
+		background-color: rgba(33, 158, 188, .4);
+
+		h3 {
+			font-family: 'cinzel', serif;
+			font-size: 4.5rem;
+			font-weight: 600;
+			color: var(--darkBlue);
+			text-align: right;
+			 
+		}
+		p {
+			font-family: 'cabin', sans-serif;
+			font-size: 2.5rem;
+			color: var(--darkBlue);
+			width: 40%;
+			text-align: justify;
+		}
+		button {
+			background-color: var(--lightBlue);
+			border: none;
+			width: 16rem;
+			height: 8rem;
+			border-radius: 50px;
+			color: white;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+
+		}
+	}
+ }
+
+ .cardContainerTkd {
+	display: flex;
+
+	
+ }
+`

@@ -33,7 +33,7 @@ export default function SocialFollow() {
 const Wrapper = styled.div`
 
 .social-container {
-  margin: 5em 0 0 5em;
+  margin: 3em 0 0 5em;
   height: 35px;
   
   

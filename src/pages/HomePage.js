@@ -30,7 +30,7 @@ const HomePage = () => {
           <Row>
               <p >Learn More! Click on the links below.</p>
               <div className="homeLinks">
-                  <Link to='/login'><button className="btnHome homeBtnTkd">Taekwondo</button></Link>
+                  <Link to='/tkd' reloadDocument><button className="btnHome homeBtnTkd">Taekwondo</button></Link>
                   <Link to='/'><button className="btnHome homeBtnTrip">Trip Outreach</button></Link>
                   <Link to='/'><button className="btnHome homeBtnYotae">Yotae</button></Link>
                   <Link to='/'><button className="btnHome homeBtnBehav">Behavioral</button></Link>
@@ -39,6 +39,6 @@ const HomePage = () => {
           </Row>
             </div>
             </HomePageWrapper>
-  )
+  )  
 }
 export default HomePage
