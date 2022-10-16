@@ -44,13 +44,13 @@ const HomePage = () => {
 						<Link to='/trip' >
 							<button className='btnHome homeBtnTrip'>Trip Outreach</button>
 						</Link>
-						<Link to='/'>
+						<Link to='/yotae'>
 							<button className='btnHome homeBtnYotae'>Yotae</button>
 						</Link>
-						<Link to='/'>
+						<Link to='/behavioral'>
 							<button className='btnHome homeBtnBehav'>Behavioral</button>
 						</Link>
-						<Link to='/'>
+						<Link to='/aboutus'>
 							<button className='btnHome homeBtnAbout'>About Us</button>
 						</Link>
 					</div>

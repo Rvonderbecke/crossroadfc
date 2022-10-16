@@ -11,7 +11,7 @@ const media = {
     @media only screen and (max-width: 480px){
         ${styles}
     }
-`,
+`,  
 };
 
 export const Col = styled.div`
@@ -177,7 +177,9 @@ export const HomePageWrapper = styled.div`
 
 export const TkdWrapper = styled.div`
 
-
+.cardContent {
+	margin-left: 2em;
+}
  
 
  .cardContainerTkd {
@@ -204,13 +206,90 @@ export const TripWrapper = styled.div`
 .infoTxt {
 	font-size: 2rem;
 }
-.cardContent {
-	text-align: justify;
+.classDesc {
+	margin-left: 2em;
+	color: var(--darkBlue);
 }
-.tripImg {
-	height: 22em;
-.yellow {
-	border-top: 5px solid var();
-}
+.classTitle {
+	margin-left: 1em;
+	color: var(--darkBlue);
 }
 `;
+export const YotaeWrapper = styled.div`
+.cardContainerYotae {
+	display: flex;
+	color: var(--darkBlue);
+	
+}
+.cardContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.classTitle {
+	text-align: center;
+	margin-left: 1em;
+	
+}
+.classDesc {
+	text-align: center;
+	margin-left: 2em;
+}
+`;
+
+export const AboutUsWrapper = styled.div`
+
+
+.cardContainerAbout {
+	display: flex;
+	color: var(--darkBlue);
+	
+	
+}
+.cardContent{
+display: flex;
+justify-content: flex-start;
+	h2 {
+	text-align: center;
+	
+}
+}
+.infoTxt {
+	text-align: center;
+}
+.hours {
+	font-family: 'cabin', sans-serif;
+	font-size: 2rem;
+}
+.aboutDesc {
+	font-size: 2rem;
+	margin-left: 2.5em;
+}
+.linkBtn {
+	background-color: transparent;
+	border: none;
+	color: var(--darkBlue);
+	font-family: 'cabin', sans-serif;
+	font-size: 2rem;
+	font-weight: 500;
+}
+.donateBtn, .emailBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.donateBtn{
+	margin-bottom: 1.5em;
+}
+.donateIcon {
+	height: 5em;
+	
+}
+.emailIcon {
+	height: 3.5em;
+}
+
+`;
+

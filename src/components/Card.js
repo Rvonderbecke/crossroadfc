@@ -17,6 +17,7 @@ const CardWrapper = styled.div`
 	width: 37em;
 	border-radius: 30px;
 	border: 1px solid lightgrey;
+	box-shadow: 5px 10px #888888;
 
 	.cardBody {
 		display: flex;
@@ -31,7 +32,7 @@ const CardWrapper = styled.div`
 	}
 	.cardContent {
 		width: 25em;
-		margin-left: 2em;
+		
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -142,6 +143,54 @@ const CardWrapper = styled.div`
       
 		}
 	}
+
+	/* TRIP OUTREACH */
+
+.cardContent {
+	/* text-align: justify; */
+	margin: 0%;
+}
+.tripImg {
+	height: 22em;
+	width: 30.4em;
+	border-radius: 0 0 30px 0;
+}
+.yellow {
+	border-top: 5px solid var(--yellow);
+}
+
+.coral {
+	border-top: 5px solid var(--coral);
+}
+.green {
+	border-top: 5px solid var(--green);
+}
+.blue {
+	border-top: 5px solid var(--blue);
+}
+
+/* YOTAE */
+.yotaeImg {
+	margin-left: 2em;
+}
+
+.body {
+	height: 25em;
+}
+.spirit {
+	height: 13em;
+}
+.mind {
+height: 10em;
+}
+.sweat {
+height: 13em;
+}
+
+/* ABOUT */
+
+
+
 
 `;
 export default Card;

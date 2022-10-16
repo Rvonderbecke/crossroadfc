@@ -36,7 +36,7 @@ Program. The kids will learn the
 basic fundamentals and get 
 some exercise. 
                   </p>
-                  <img className='tripImg yellow' src='/images/logoCR.svg' alt="tkd" />
+                  <img className='tripImg yellow' src='/images/tkdImg.jpg' alt="tkd" />
                   </div>
             </Card>
           </Col>
@@ -53,7 +53,7 @@ are only a kid once so we make
 sure there is plenty of time to 
 play games.
                   </p>
-                  <img className='tripImg green' src='/images/logoCR.svg' alt="tkd" />
+                  <img className='tripImg coral' src='/images/funImg.jpg' alt="tkd" />
                   </div>
               
             </Card>
@@ -66,7 +66,7 @@ play games.
 									<p className='classDesc'>
                   Go on fun field trips!  Kids can earn trips as well as points for their volunteer work and maintaining good grades in school. 
                   </p>
-                  <img className='tripImg coral' src='/images/logoCR.svg' alt="tkd" />
+                  <img className='tripImg green' src='/images/exploreImg.jpg' alt="tkd" />
                   </div>
             </Card>
             </Col>
@@ -84,7 +84,7 @@ need it, it also teaches kids to
 value others as well as 
 themselves. 
                   </p>
-                  <img className='tripImg ' src='/images/logoCR.svg' alt="tkd" />
+                  <img className='tripImg blue' src='/images/giveBackImg.jpg' alt="tkd" />
                   </div>
               
             </Card>
