@@ -29,29 +29,63 @@ while having lots of fun! All kids ages 5 to 18 are welcome.
             <Card color='#FBD008'>
             <div className='cardContent'>
 									
-									<h2 className='classTitle'>Self-Control</h2>
+									<h2 className='classTitle'>Learn<br></br>Taekwondo</h2>
 									<p className='classDesc'>
-										Self-Control and basic taekwondo principles are combined in
-										this course along with foundational process teaching aimed
-										at core principles of decision making and leadership skill
-										development.
+                  Taekwondo is a part of the TRIP 
+Program. The kids will learn the 
+basic fundamentals and get 
+some exercise. 
                   </p>
-                  <img src='/images/tkdImg.jpg' alt="tkd" />
+                  <img className='tripImg yellow' src='/images/logoCR.svg' alt="tkd" />
                   </div>
             </Card>
           </Col>
+         
           <Col size={1}>
-            <Card color='#EB5050'>
+              <Card color='#EB5050'>
+              <div className='cardContent'>
+									
+									<h2 className='classTitle'>Have Fun</h2>
+									<p className='classDesc'>
+                  Having fun is an important part of 
+the TRIP Outreach program. You 
+are only a kid once so we make 
+sure there is plenty of time to 
+play games.
+                  </p>
+                  <img className='tripImg green' src='/images/logoCR.svg' alt="tkd" />
+                  </div>
               
             </Card>
           </Col>
           <Col size={1}>
             <Card color='#5EAB77'>
-              
+            <div className='cardContent'>
+									
+									<h2 className='classTitle'>Go<br></br>Exploring</h2>
+									<p className='classDesc'>
+                  Go on fun field trips!  Kids can earn trips as well as points for their volunteer work and maintaining good grades in school. 
+                  </p>
+                  <img className='tripImg coral' src='/images/logoCR.svg' alt="tkd" />
+                  </div>
             </Card>
-          </Col>
-          <Col size={1}>
-            <Card>
+            </Col>
+            <Col size={1}>
+              <Card>
+              <div className='cardContent'>
+									
+									<h2 className='classTitle'>Give Back</h2>
+									<p className='classDesc'>
+                  Giving back is a big part of what 
+TRIP Outreach is all about. Not 
+only does it bring the community 
+together and help individuals that 
+need it, it also teaches kids to 
+value others as well as 
+themselves. 
+                  </p>
+                  <img className='tripImg ' src='/images/logoCR.svg' alt="tkd" />
+                  </div>
               
             </Card>
           </Col>

@@ -8,9 +8,9 @@ const HomePage = () => {
 
 	useEffect(() => {
 		document.getElementById(`${currentCount}`).classList.add('active');
-		return function () {
-			document.getElementById(`${currentCount}`).classList.remove('active');
-		};
+		// return function () {
+		// 	document.getElementById(`${currentCount}`).classList.remove('active');
+		// };
 	}, [currentCount]);
 
 	return (
@@ -26,6 +26,7 @@ const HomePage = () => {
 								return;
 							}
 							setCurrentCount(currentCount + 1);
+							document.getElementById(`${currentCount}`).classList.remove('active');
 						}}
 					/>
 					<div className='dots'>
@@ -37,10 +38,10 @@ const HomePage = () => {
 				<Row>
 					<p>Learn More! Click on the links below.</p>
 					<div className='homeLinks'>
-						<Link to='/tkd' reloadDocument>
+						<Link to='/tkd' >
 							<button className='btnHome homeBtnTkd'>Taekwondo</button>
 						</Link>
-						<Link to='/trip' reloadDocument>
+						<Link to='/trip' >
 							<button className='btnHome homeBtnTrip'>Trip Outreach</button>
 						</Link>
 						<Link to='/'>

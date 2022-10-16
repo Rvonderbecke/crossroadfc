@@ -204,4 +204,13 @@ export const TripWrapper = styled.div`
 .infoTxt {
 	font-size: 2rem;
 }
+.cardContent {
+	text-align: justify;
+}
+.tripImg {
+	height: 22em;
+.yellow {
+	border-top: 5px solid var();
+}
+}
 `;
