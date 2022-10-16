@@ -17,8 +17,8 @@ const LandingPage = () => {
 							</Link>
 							<h1>crossroad family center</h1>
 						</div>
-						<Link to='login' >
-							<button className='btn headerBtn'>
+						<Link to='login' reloadDocument>
+							<button className='btn headerBtn' disabled>
 								{user ? 'Logout' : 'Login'}
 							</button>
 						</Link>

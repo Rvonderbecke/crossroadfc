@@ -21,6 +21,7 @@ export const Col = styled.div`
 `;
 
 export const LandingPageWrapper = styled.header`
+
 	.headerContainer {
 		padding: 0 2rem;
 		border-top: 20px solid var(--blue);
@@ -42,7 +43,7 @@ export const LandingPageWrapper = styled.header`
 	}
 
 	.footerContainer {
-		height: 120px;
+		
 		display: flex;
 		background-color: var(--blue);
 	}
@@ -175,46 +176,32 @@ export const HomePageWrapper = styled.div`
 `;
 
 export const TkdWrapper = styled.div`
- .tkdContainer {
-	.banner {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		height: 15em;
-		background-color: rgba(33, 158, 188, .4);
 
-		h3 {
-			font-family: 'cinzel', serif;
-			font-size: 4.5rem;
-			font-weight: 600;
-			color: var(--darkBlue);
-			text-align: right;
-			 
-		}
-		p {
-			font-family: 'cabin', sans-serif;
-			font-size: 2.5rem;
-			color: var(--darkBlue);
-			width: 40%;
-			text-align: justify;
-		}
-		button {
-			background-color: var(--lightBlue);
-			border: none;
-			width: 16rem;
-			height: 8rem;
-			border-radius: 50px;
-			color: white;
-			font-size: 2.5rem;
-			text-transform: uppercase;
 
-		}
-	}
- }
+ 
 
  .cardContainerTkd {
+	
 	display: flex;
 
 	
  }
-`
+ 
+
+.Modal{
+	background-color: red;
+		font-size: 30rem;
+
+	
+}
+
+`;
+
+export const TripWrapper = styled.div`
+.cardContainerTrip {
+	display: flex;
+}
+.infoTxt {
+	font-size: 2rem;
+}
+`;

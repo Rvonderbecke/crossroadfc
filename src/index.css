@@ -106,3 +106,37 @@ html {
     margin: 1rem 4rem;
     
    }
+   .banner {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 15em;
+		background-color: rgba(33, 158, 188, .4);}
+
+		.banner h3 {
+			font-family: 'cinzel', serif;
+			font-size: 4.5rem;
+			font-weight: 600;
+			color: var(--darkBlue);
+			text-align: right;
+			 
+		}
+		.banner p {
+			font-family: 'cabin', sans-serif;
+			font-size: 2.5rem;
+			color: var(--darkBlue);
+			width: 50%;
+			text-align: justify;
+		}
+		.banner button {
+			background-color: var(--lightBlue);
+			border: none;
+			width: 16rem;
+			height: 8rem;
+			border-radius: 50px;
+			color: white;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+
+		}
+	
