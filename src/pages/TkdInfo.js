@@ -9,7 +9,7 @@ const TkdInfo = () => {
 	const [openPop, setOpenPop] = useState({
 		modal1: false,
 		modal2: false,
-	});
+	});  
 	return (
 		<TkdWrapper>
 			<div className='tkdContainer'>

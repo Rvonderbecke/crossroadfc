@@ -176,14 +176,7 @@ export const HomePageWrapper = styled.div`
 `;
 
 export const TkdWrapper = styled.div`
-
-.cardContent {
-	margin-left: 2em;
-}
- 
-
  .cardContainerTkd {
-	
 	display: flex;
 
 	
@@ -202,16 +195,17 @@ export const TkdWrapper = styled.div`
 export const TripWrapper = styled.div`
 .cardContainerTrip {
 	display: flex;
+	
 }
 .infoTxt {
 	font-size: 2rem;
 }
 .classDesc {
-	margin-left: 2em;
+	
 	color: var(--darkBlue);
 }
 .classTitle {
-	margin-left: 1em;
+	
 	color: var(--darkBlue);
 }
 `;
@@ -282,6 +276,9 @@ justify-content: flex-start;
 }
 .donateBtn{
 	margin-bottom: 1.5em;
+}
+.emailBtn {
+	margin-top: 2em;
 }
 .donateIcon {
 	height: 5em;

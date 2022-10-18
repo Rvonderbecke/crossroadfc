@@ -1,10 +1,21 @@
 import { Grid, Row, Col, LandingPageWrapper } from '../styles';
 import SocialFollow from '../components/SocialFollow';
+import axios from 'axios'
 import { useState } from 'react';
-import { Outlet, Link} from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
+
 const user = false; //temp
+
+
+
 const LandingPage = () => {
 	const [user, setUser] = useState(false);
+
+	const handleEmailClick =async () => {
+		const { data } = await axios.post('/api/sendEmail');
+		alert(data)
+	}
+
 
 	return (
 		<LandingPageWrapper>
@@ -50,7 +61,7 @@ const LandingPage = () => {
                 <p>Subscride to our Newsletter!</p>
                 <div className="subscribeElement">
 								<input type='text' placeholder='Enter Email Address' />
-                  <button className='subscribeBtn'>Subscribe</button>
+                  <button className='subscribeBtn' onClick={handleEmailClick}>Subscribe</button>
                   </div>
 							</div>
 						</Col>

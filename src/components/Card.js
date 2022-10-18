@@ -30,12 +30,16 @@ const CardWrapper = styled.div`
 		height: 47.5em;
 		border-radius: 30px 0 0 30px;
 	}
+
 	.cardContent {
 		width: 25em;
-		
+		margin-left: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+	align-items: center;
+	
+	
     
 
 		.tkdLevel {
@@ -44,7 +48,8 @@ const CardWrapper = styled.div`
 			color: var(--blue);
 			border-bottom: 2px solid var(--blue);
 			width: 10em;
-      margin-top: .75em
+		
+   
 		}
 
 		.classTitle {
@@ -52,7 +57,9 @@ const CardWrapper = styled.div`
 			font-size: 3rem;
 			font-weight: 600;
 			text-transform: uppercase;
-			width: 10em;
+			
+			
+			
 		}
 		.classDesc {
 			font-family: 'cabin', serif;
@@ -76,6 +83,7 @@ const CardWrapper = styled.div`
 		.thirdBelt {
 			display: flex;
 			justify-content: space-between;
+			
       
       
 		}
@@ -146,14 +154,12 @@ const CardWrapper = styled.div`
 
 	/* TRIP OUTREACH */
 
-.cardContent {
-	/* text-align: justify; */
-	margin: 0%;
-}
+
 .tripImg {
 	height: 22em;
 	width: 30.4em;
 	border-radius: 0 0 30px 0;
+	
 }
 .yellow {
 	border-top: 5px solid var(--yellow);
@@ -171,7 +177,7 @@ const CardWrapper = styled.div`
 
 /* YOTAE */
 .yotaeImg {
-	margin-left: 2em;
+	
 }
 
 .body {

@@ -23,6 +23,7 @@ const HomePage = () => {
 						onClick={() => {
 							if (currentCount >= ads) {
 								setCurrentCount(0);
+								document.getElementById(`${currentCount}`).classList.remove('active');
 								return;
 							}
 							setCurrentCount(currentCount + 1);
