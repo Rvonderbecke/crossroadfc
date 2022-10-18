@@ -36,8 +36,8 @@ const CardWrapper = styled.div`
 		margin-left: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-	align-items: center;
+    justify-content: flex-start;
+	align-items: flex-start;
 	
 	
     
@@ -78,11 +78,21 @@ const CardWrapper = styled.div`
       cursor: pointer;
     }
 
+	.beltGroup {
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+
 		.firstBelt,
 		.secondBelt,
 		.thirdBelt {
 			display: flex;
-			justify-content: space-between;
+			flex-direction: row;
+			align-self: flex-start;
+			
+		
 			
       
       
@@ -97,6 +107,7 @@ const CardWrapper = styled.div`
 		}
 		.beltWhite {
 			border: 1px solid lightgray;
+			
 		}
 		.beltYellow {
 			background-color: var(--beltyellow);
@@ -104,7 +115,7 @@ const CardWrapper = styled.div`
 
 		.beltOrange {
 			background-color: var(--beltorange);
-      margin-bottom: 2em;
+    
 		}
 		.beltGreen {
 			background-color: var(--beltgreen);
@@ -115,7 +126,7 @@ const CardWrapper = styled.div`
 
 		.beltLtBlue {
 			background-color: var(--beltlightblue);
-      margin-bottom: 2em;
+      
 
 		}
 		.beltDarkBlue {
@@ -147,7 +158,8 @@ const CardWrapper = styled.div`
 
 		.beltTitle {
 			font-family: 'cabin', serif;
-			font-size: 1.35rem;
+			font-size: 1.45rem;
+			margin-left: .25em;
       
 		}
 	}
@@ -159,6 +171,7 @@ const CardWrapper = styled.div`
 	height: 22em;
 	width: 30.4em;
 	border-radius: 0 0 30px 0;
+	
 	
 }
 .yellow {

@@ -42,7 +42,8 @@ const TkdInfo = () => {
 										at core principles of decision making and leadership skill
 										development.
 									</p>
-
+							
+									<div className='beltGroup'>
 									<div className='firstBelt'>
 										{' '}
 										<div className='belt beltWhite'></div>
@@ -56,6 +57,7 @@ const TkdInfo = () => {
 										<div className='belt beltOrange'></div>
 										<p className='beltTitle'>Orange Belt</p>
 									</div>
+									</div>
 								</div>
 							</Card>
 						</Col>
@@ -67,7 +69,8 @@ const TkdInfo = () => {
 									<p className='classDesc'>
 										Self-Awareness and novice taekwondo principles are brought
 										together with lessons that are designed to expand upon the
-										processing skills introduced with self-control.
+										processing skills introduced with self-control. These lessons are designed to increase ones awareness
+													of 
 										<button
 											className='more'
 											onClick={() => setOpenPop({modal1: !openPop.modal1})}>
@@ -84,8 +87,7 @@ const TkdInfo = () => {
 												className='Modal'
 											>
 												<p className='modalTxt'>
-													These lessons are designed to increase ones awareness
-													of the power they hold to their environment through
+													the power they hold to their environment through
 													self evident accomplishments while introducing steps
 													of true confidence development.
 												</p>

@@ -11,9 +11,14 @@ const user = false; //temp
 const LandingPage = () => {
 	const [user, setUser] = useState(false);
 
-	const handleEmailClick =async () => {
-		const { data } = await axios.post('/api/sendEmail');
-		alert(data)
+	const handleEmailClick = async () => {
+		try {
+			const { data } = await axios.post('/api/sendEmail');
+			alert(data)
+			
+		} catch (error) {
+			alert(error)
+		}
 	}
 
 
