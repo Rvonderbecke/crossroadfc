@@ -17,7 +17,7 @@ const CardWrapper = styled.div`
 	width: 37em;
 	border-radius: 30px;
 	border: 1px solid lightgrey;
-	box-shadow: 5px 10px #888888;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 	.cardBody {
 		display: flex;
@@ -36,8 +36,8 @@ const CardWrapper = styled.div`
 		margin-left: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-	align-items: flex-start;
+    
+
 	
 	
     

@@ -8,11 +8,11 @@ const HomePage = () => {
 
 	useEffect(() => {
 		document.getElementById(`${currentCount}`).classList.add('active');
-		// return function () {
-		// 	document.getElementById(`${currentCount}`).classList.remove('active');
-		// };
 	}, [currentCount]);
-
+// 	setTimeout(() => {
+// 		setCurrentCount(+1)
+	
+// }, 5000)
 	return (
 		<HomePageWrapper>
 			<div className='homePageContainer'>

@@ -8,8 +8,12 @@ exports.handler = async (event, context, cb) => {
 	const msg = {
 		to: 'admin@crossroadfc.com',
 		from: 'ryannv@crossroadfc.com',
+		templateId: 'd-22e16811682947ff8d9eacec19a31a1b',
 		subject: 'soemthing',
-		text: 'yup'
+		text: 'yup',
+		// dynamic_template_data: {
+		// 	firstName: 
+		// }
   };
   
 

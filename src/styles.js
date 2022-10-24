@@ -133,8 +133,11 @@ export const HomePageWrapper = styled.div`
 			text-align: center;
 		}
 	}
+	.footerContainer {
+	
+	}
 	.homeLinks {
-		margin-bottom: 3em;
+		margin-bottom: 5.75em;
 		.homeBtnTkd {
 			background-color: var(--yellow);
 			height: ;
@@ -181,7 +184,10 @@ export const TkdWrapper = styled.div`
 
 	
  }
- 
+ .cardContent {
+	display: flex;
+	justify-content: flex-start;
+ }
 
 .Modal{
 	background-color: red;
@@ -203,10 +209,23 @@ export const TripWrapper = styled.div`
 .classDesc {
 	
 	color: var(--darkBlue);
+	margin-left: 2em;
 }
 .classTitle {
 	
 	color: var(--darkBlue);
+	margin-left: 1em;
+}
+.cardContent {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 0!important;
+	position: relative;
+	.tripImg{
+		position: absolute;
+		bottom: 0%;
+		
+	}
 }
 `;
 export const YotaeWrapper = styled.div`
@@ -216,21 +235,15 @@ export const YotaeWrapper = styled.div`
 	
 }
 .cardContent {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+text-align: center;
+display: flex;
+justify-content: space-between;
+
+
+	
 	
 }
-.classTitle {
-	text-align: center;
-	margin-left: 1em;
-	
-}
-.classDesc {
-	text-align: center;
-	margin-left: 2em;
-}
+
 `;
 
 export const AboutUsWrapper = styled.div`
@@ -245,8 +258,15 @@ export const AboutUsWrapper = styled.div`
 .cardContent{
 display: flex;
 justify-content: flex-start;
-	h2 {
-	text-align: center;
+align-items: center;
+
+margin: 0%;
+width: 100%;
+h2 {
+margin-top: 1.5em;
+margin-left: 2em;
+width: 100%;
+
 	
 }
 }
@@ -256,10 +276,14 @@ justify-content: flex-start;
 .hours {
 	font-family: 'cabin', sans-serif;
 	font-size: 2rem;
+	line-height: 1.25em;
 }
 .aboutDesc {
 	font-size: 2rem;
-	margin-left: 2.5em;
+	width: 83%;
+	
+
+
 }
 .linkBtn {
 	background-color: transparent;
