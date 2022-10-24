@@ -194,7 +194,7 @@ const CardWrapper = styled.div`
 }
 
 .body {
-	height: 25em;
+	height: 20em;
 }
 .spirit {
 	height: 13em;
@@ -208,7 +208,17 @@ height: 13em;
 
 /* ABOUT */
 
-
+/* ABA Therapy */
+.cardContent {
+	h2 {
+		text-align: center;
+	}
+	.behavDesc {
+		font-family: 'cabin', serif;
+			font-size: 1.75rem;
+			line-height: 2.25rem;
+	}
+}
 
 
 `;

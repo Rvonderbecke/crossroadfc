@@ -48,7 +48,7 @@ const HomePage = () => {
 						<Link to='/yotae'>
 							<button className='btnHome homeBtnYotae'>Yotae</button>
 						</Link>
-						<Link to='/behavioral'>
+						<Link to='/aba'>
 							<button className='btnHome homeBtnBehav'>Behavioral</button>
 						</Link>
 						<Link to='/aboutus'>

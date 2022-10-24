@@ -239,6 +239,13 @@ text-align: center;
 display: flex;
 justify-content: space-between;
 
+.classDesc {
+	font-family: 'cabin',sans-serif;
+	font-size: 1.5rem;
+			line-height: 1.75rem;
+
+}
+
 
 	
 	
@@ -264,8 +271,8 @@ margin: 0%;
 width: 100%;
 h2 {
 margin-top: 1.5em;
-margin-left: 2em;
-width: 100%;
+text-align: center;
+
 
 	
 }
@@ -314,3 +321,8 @@ width: 100%;
 
 `;
 
+export const BehavioralWrapper = styled.div`
+.cardContainerBehav {
+	display: flex;
+}
+`

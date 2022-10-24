@@ -6,14 +6,16 @@ import { Outlet, Link } from 'react-router-dom';
 
 const user = false; //temp
 
-
-
+const activeUser = {
+	name: 'Ryann V',
+	email: 'ryannskv@gmail.com'
+}
 const LandingPage = () => {
-	const [user, setUser] = useState(false);
+	const [user, setUser] = useState(activeUser);
 
 	const handleEmailClick = async () => {
 		try {
-			const { data } = await axios.post('/api/sendEmail');
+			const { data } = await axios.post('/api/sendEmail', user);
 			alert(data)
 			
 		} catch (error) {
@@ -65,7 +67,8 @@ const LandingPage = () => {
               <div className='footerRight'>
                 <p>Subscride to our Newsletter!</p>
                 <div className="subscribeElement">
-								<input type='text' placeholder='Enter Email Address' />
+									<input type='text' placeholder='Enter Email Address' name='email' value={user.email} onChange={(e) => {setUser({ ...activeUser, [e.target.name]: e.target.value })
+									console.log(user.email)}} />
                   <button className='subscribeBtn' onClick={handleEmailClick}>Subscribe</button>
                   </div>
 							</div>
