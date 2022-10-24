@@ -7,8 +7,8 @@ import { Outlet, Link } from 'react-router-dom';
 const user = false; //temp
 
 const activeUser = {
-	name: 'Ryann V',
-	email: 'ryannskv@gmail.com'
+	name: 'New User',
+	email: ''
 }
 const LandingPage = () => {
 	const [user, setUser] = useState(activeUser);
